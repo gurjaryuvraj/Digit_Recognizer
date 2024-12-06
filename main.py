@@ -92,7 +92,7 @@ def open_draw():
         
         # Convert to grayscale using luminosity method
         photo = np.dot(rgb_image[..., :3], [0.2989, 0.5870, 0.1140]).astype(np.uint8)
-        st.text(photo.shape)
+        # st.text(photo.shape)
         
         
 

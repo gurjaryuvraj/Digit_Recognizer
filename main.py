@@ -11,14 +11,14 @@ from tensorflow.keras.models import load_model
 def ml_model(img):
     model = load_model("./trained_model/number_identify1_1.keras")
 
-    st.text(img.shape)
+    # st.text(img.shape)
     # st.text("dimension {}".format(img.shape))
     
 
     prediction = model.predict(img.reshape(1,28*28))
     prediction_p = tf.nn.softmax(prediction)
     yhat = np.argmax(prediction_p)
-    st.text(f" predicting : \n{prediction}")
+    # st.text(f" predicting : \n{prediction}")
     return yhat
 
 

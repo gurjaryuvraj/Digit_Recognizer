@@ -3,3 +3,5 @@ opencv-python-headless
 numpy
 pandas
 Pillow
+tensorflow
+streamlit-drawable-canvas

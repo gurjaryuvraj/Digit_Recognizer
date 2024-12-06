@@ -23,7 +23,7 @@ def ml_model(img):
     return yhat
 
 def CNN_model(img):
-    model = load_model("./trained_model/CNN_model_1.keras")
+    model = load_model("./trained_model/CNN_model_2.keras")
 
     # expanding the dimension to (1,28,28)
     img_expand = np.expand_dims(img, axis=0)

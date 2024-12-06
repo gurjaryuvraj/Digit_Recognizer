@@ -70,7 +70,7 @@ def open_draw():
 
    
 
-    if(st.button("Predict the Digit")):
+    if(st.button("Recognize the Digit")):
         
 
         image_data = canvas_result.image_data.astype(np.uint8)

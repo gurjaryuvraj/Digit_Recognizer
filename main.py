@@ -10,12 +10,13 @@ from tensorflow.keras.models import load_model
 
 def ml_model(img):
     model = load_model("./trained_model/number_identify1_1.keras")
+    
+    
 
-    # st.text(img.shape)
     # st.text("dimension {}".format(img.shape))
     
 
-    prediction = model.predict(img.reshape(1,28*28))
+    prediction = model.predict(img.reshape(1, 28*28))
     prediction_p = tf.nn.softmax(prediction)
     yhat = np.argmax(prediction_p)
     # st.text(f" predicting : \n{prediction}")
@@ -24,11 +25,12 @@ def ml_model(img):
 def CNN_model(img):
     model = load_model("./trained_model/CNN_model_1.keras")
 
-    # st.text(img.shape)
-    # st.text("dimension {}".format(img.shape))
+    # expanding the dimension to (1,28,28)
+    img_expand = np.expand_dims(img, axis=0)
+    # st.text("dimension {}".format(img_expand.shape))
     
 
-    prediction = model.predict(img.reshape(1,28*28))
+    prediction = model.predict(img_expand.reshape(1,28,28,1))
     prediction_p = tf.nn.softmax(prediction)
     yhat = np.argmax(prediction_p)
     # st.text(f" predicting : \n{prediction}")
@@ -90,7 +92,8 @@ def open_draw():
         
         # Convert to grayscale using luminosity method
         photo = np.dot(rgb_image[..., :3], [0.2989, 0.5870, 0.1140]).astype(np.uint8)
-        # st.text(photo.shape)
+        st.text(photo.shape)
+        
         
 
 

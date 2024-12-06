@@ -9,7 +9,7 @@ from streamlit_drawable_canvas import st_canvas
 from tensorflow.keras.models import load_model
 
 def ml_model(img):
-    model = load_model("../trained_model/number_identify1_1.keras")
+    model = load_model("./trained_model/number_identify1_1.keras")
 
     st.text(img.shape)
     # st.text("dimension {}".format(img.shape))

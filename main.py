@@ -21,6 +21,19 @@ def ml_model(img):
     # st.text(f" predicting : \n{prediction}")
     return yhat
 
+def CNN_model(img):
+    model = load_model("./trained_model/CNN_model_1.keras")
+
+    # st.text(img.shape)
+    # st.text("dimension {}".format(img.shape))
+    
+
+    prediction = model.predict(img.reshape(1,28*28))
+    prediction_p = tf.nn.softmax(prediction)
+    yhat = np.argmax(prediction_p)
+    # st.text(f" predicting : \n{prediction}")
+    return yhat
+
 
 
 
@@ -82,7 +95,7 @@ def open_draw():
 
 
         # Load the model
-        prediction = ml_model(photo)
+        prediction = CNN_model(photo)
         st.title("The Prediction is")
         st.title(prediction)
 

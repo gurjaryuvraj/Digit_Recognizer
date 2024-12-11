@@ -12,7 +12,7 @@ This project is a real-time digit recognition system built using a Convolutional
 - **Machine Learning Framework:** TensorFlow/Keras
 - **Web Framework:** Streamlit
 - **Languages:** Python
-- **Visualization:** Matplotlib/Seaborn (if applicable for training data analysis)
+- **Visualization:** Matplotlib
 
 ## How It Works
 1. **Dataset:** The model was trained on the MNIST dataset, a widely used benchmark for digit recognition.
@@ -24,8 +24,7 @@ To run this project locally:
 
 1. **Clone the Repository:**
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/gurjaryuvraj/Digit_Recognizer.git
 
 2. **Install Dependencies:**
 Ensure you have Python and pip installed, then run:
@@ -39,21 +38,14 @@ Execute the following command in the terminal:
     streamlit run main.py
 4. **Access the Application:**
 Once the server starts, you will see a URL in the terminal (e.g., `http://localhost:8501`). Open this URL in a web browser to use the application.
+### Web Application
+
+- **Access the live web application here:** [DigitRecognizeByYuvraj](digitrecognizerbyyuvraj.streamlit.app)
 
 ## Project Structure
-- **`app.py`:** The main Streamlit application script.
+- **`main.py`:** The main Streamlit application script.
 - **`model/`:** Contains the trained CNN model and any preprocessing scripts.
-- **`utils/`:** Helper scripts for data processing and visualization.
 - **`requirements.txt`:** List of dependencies.
-
-## Training the Model
-If you want to train the model yourself:
-1. Ensure you have the MNIST dataset (can be loaded via TensorFlow/Keras).
-2. Run the training script:
-   ```bash
-   python train.py
-
-3. The trained model will be saved in the `model/` directory.
 
 ## Future Enhancements
 - Support for additional datasets or multilingual digit recognition.

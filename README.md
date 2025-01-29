@@ -40,7 +40,7 @@ Execute the following command in the terminal:
 Once the server starts, you will see a URL in the terminal (e.g., `http://localhost:8501`). Open this URL in a web browser to use the application.
 ### Web Application
 
-- **Access the live web application here:** [DigitRecognizeByYuvraj](digitrecognizerbyyuvraj.streamlit.app)
+- **Access the live web application here:** [DigitRecognizeByYuvraj](https://digitrecognizerbyyuvraj.streamlit.app/)
 
 ## Project Structure
 - **`main.py`:** The main Streamlit application script.
